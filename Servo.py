@@ -37,7 +37,7 @@ class Servo():
         """ Returns the given position (0 to 1) converted into
             a pulse length (minPulseLength to max pulse length)
         """
-       return (position) * (maxPulseLength - minPulseLength) / 1 + minPulseLength
+            return (position) * (maxPulseLength - minPulseLength) / 1 + minPulseLength
         
      
     def write(self,positions):
