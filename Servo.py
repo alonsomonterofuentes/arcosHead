@@ -46,5 +46,6 @@ class Servo():
         for position in positions:
             self.pwm.set_pwm(self.channel, 0, int(self.positionToPulse(position)))
             print "Moved Servo on channel " + str(self.channel) + " to " + str(self.positionToPulse(position)*180.0) + " degrees"
-            time.sleep(1)
+            time.sleep(0.5)
+
 
