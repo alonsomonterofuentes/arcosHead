@@ -18,9 +18,9 @@ import Adafruit_PCA9685
 import time
 class Servo():
 
-    def __init__(self, channel, frequency=250,
+    def __init__(self, channel, frequency=240,
                  minPulseLength=150,
-                 maxPulseLength=600,speed=1):
+                 maxPulseLength=510,speed=1):
         self.channel = channel
         self.frequency = frequency
         self.minPulseLength = minPulseLength
