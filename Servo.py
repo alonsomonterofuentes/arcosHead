@@ -20,7 +20,7 @@ class Servo():
 
     def __init__(self, channel, frequency=250,
                  minPulseLength=150,
-                 maxPulseLength=600,speed):
+                 maxPulseLength=600,speed=1):
         self.channel = channel
         self.frequency = frequency
         self.minPulseLength = minPulseLength
