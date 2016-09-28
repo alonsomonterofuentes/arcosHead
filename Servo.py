@@ -20,11 +20,12 @@ class Servo():
 
     def __init__(self, channel, frequency=250,
                  minPulseLength=150,
-                 maxPulseLength=600):
+                 maxPulseLength=600,speed):
         self.channel = channel
         self.frequency = frequency
         self.minPulseLength = minPulseLength
         self.maxPulseLength = maxPulseLength
+        self.speed = speed
         self.setup(frequency)
 
     def setup(self, frequency):
@@ -46,6 +47,6 @@ class Servo():
         for position in positions:
             self.pwm.set_pwm(self.channel, 0, int(self.positionToPulse(position)))
             print "Moved Servo on channel " + str(self.channel) + " to " + str(self.positionToPulse(position)*180.0) + " degrees"
-            time.sleep(0.5)
+            time.sleep(self.speed)
 
 
