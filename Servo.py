@@ -15,7 +15,7 @@ TODO:
 # License:  GPL v2
 
 import Adafruit_PCA9685
-import time
+from time import sleep
 class Servo():
 
     def __init__(self, channel, frequency=240,
@@ -47,6 +47,6 @@ class Servo():
         for position in positions:
             self.pwm.set_pwm(self.channel, 0, int(self.positionToPulse(position)))
             print "Moved Servo on channel " + str(self.channel) + " to " + str(self.positionToPulse(position)*180.0) + " degrees"
-            time.sleep(self.speed)
+            self.sleep(self.speed)
 
 
