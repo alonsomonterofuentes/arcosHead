@@ -7,8 +7,6 @@ Servo.py
 Controls a servo on a given channel by moving it to a position
 between 0(0) and 1(180) using Adafruit's library for the PCA9685
 
-TODO:
-     *Check default values for frequency, min and max pulse
 """
 
 # Author: Alonso Montero <alon182@gmail.com
