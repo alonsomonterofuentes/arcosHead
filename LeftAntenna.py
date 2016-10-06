@@ -6,13 +6,13 @@ LeftAntenna.py
 -------------
 Controls the left antenna by moving it to a position
 between 0(0) and 1(180) 
-
+Gets setup configuration from 
 """
 # Author: Alonso Montero <alon182@gmail.com
 # License:  GPL v2
 
 from Servo import *
-from conf import *
+from conf import conf
 
 class LeftAntenna():
     def __init__(self)
@@ -24,5 +24,5 @@ class LeftAntenna():
         self.servo = Servo(self.channel, self.frequency, self.minPulseLength, self.maxPulseLength)
 
     def move(positions):
-        self.servo.move(positions)
+        self.servo.servo(positions)
 
