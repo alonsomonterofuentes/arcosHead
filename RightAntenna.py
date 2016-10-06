@@ -25,4 +25,4 @@ class LeftAntenna():
         self.servo = Servo(self.channel, self.frequency, self.minPulseLength, self.maxPulseLength)
 
     def move(positions):
-        self.servo.move(positions)
+        self.servo.write(positions)
