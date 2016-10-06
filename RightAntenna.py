@@ -18,11 +18,8 @@ from conf import *
 class LeftAntenna():
     def __init__(self)
         self.configuration = conf("Setting.ini")
-        self.channel = self.configuration.getSetting("LeftAntenna","channel")
-        self.frequency = self.configuration.getSetting("LeftAntenna","frequency")
-        self.minPulseLength = self.configuration.getSetting("LeftAntenna","minPulseLength")
-        self.maxPulseLength = self.configuration.getSetting("LeftAntenna","maxPulseLength")
+        self.channel = self.configuration.get_setting("LeftAntenna","channel")
+        self.frequency = self.configuration.get_setting("LeftAntenna","frequency")
+        self.minPulseLength = self.configuration.get_setting("LeftAntenna","minPulseLength")
+        self.maxPulseLength = self.configuration.get_setting("LeftAntenna","maxPulseLength")
         self.servo = Servo(self.channel, self.frequency, self.minPulseLength, self.maxPulseLength)
-
-    def move(positions):
-        self.servo.write(positions)
