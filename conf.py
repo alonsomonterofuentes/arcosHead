@@ -6,7 +6,7 @@ class conf():
         self.path= path
         self.getConfig(path)
         
-    def getConfig(self,path):
+    def get_config(self,path):
         """
         Creates the config object
         """
@@ -14,7 +14,7 @@ class conf():
         self.config.read(path)
 
 
-    def getSetting(self,section, setting):
+    def get_setting(self,section, setting):
         """
         Returns value of a setting
         """
