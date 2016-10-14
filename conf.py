@@ -4,7 +4,7 @@ class conf():
 
     def __init__(self,path):
         self.path= path
-        self.getConfig(path)
+        self.get_config(path)
         
     def get_config(self,path):
         """
