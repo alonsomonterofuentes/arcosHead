@@ -36,15 +36,16 @@ class Servo():
         """ Returns the given position (0 to 1) converted into
             a pulse length (minPulseLength to max pulse length)
         """
-        return int(((position) * (self.maxPulseLength - self.minPulseLength) / 1 + self.minPulseLength)
+        position = float(position)
+        return int(((position) * (self.maxPulseLength - self.minPulseLength) / 1 + self.minPulseLength))
         
      
 
     def write(self, position):
         """Moves servo to required position
         """
-        self.pwm.set_pwm(self.channel, 0, int(self.positionToPulse(position)))
         position = float(position)
+        self.pwm.set_pwm(self.channel, 0, int(self.positionToPulse(position)))
         print "Moved Servo on channel " + str(self.channel) + " to position " + str(self.positionToPulse(position)) + "(" + str(position) + ")"
         sleep(self.speed)
 
