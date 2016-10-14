@@ -25,7 +25,7 @@ def represent_emotion(emotion):
     
     for i in range(0,len(position[0])):
         print 1
-        Head.left_antenna.write((position[0][i]))
+        Head.right_antenna.write((position[0][i]))
 
 if __name__ == "__main__":
     main()
