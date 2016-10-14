@@ -36,7 +36,7 @@ class Servo():
         """ Returns the given position (0 to 1) converted into
             a pulse length (minPulseLength to max pulse length)
         """
-        return (position) * (self.maxPulseLength - self.minPulseLength) / 1 + self.minPulseLength
+        return int(((position) * (self.maxPulseLength - self.minPulseLength) / 1 + self.minPulseLength)
         
      
 
